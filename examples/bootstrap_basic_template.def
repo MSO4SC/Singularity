@@ -1,0 +1,39 @@
+BootStrap: docker
+From: ubuntu:xenial
+#BootStrap: debootstrap
+#OSVersion: xenial
+#MirrorURL: http://us.archive.ubuntu.com/ubuntu/
+
+%setup
+#######################
+# ACTIONS FROM HOST
+# use $SINGULARITY_ROOTFS to refer to container root (/)
+#######################
+
+
+%post
+#######################
+# INSTALL SECTION
+#######################
+
+    #------------------
+    # USER INSTALL
+    #------------------
+
+    # ... Install here your software
+
+%runscript
+#######################
+# RUN COMMAND SCRIPT
+# Singularity "run" command launch this script
+#######################
+
+    echo "Arguments received: $*"
+    exec "$@"
+
+%test
+#######################
+# TEST COMMAND SCRIPT
+# Singularity "test" command launch this script
+#######################
+
