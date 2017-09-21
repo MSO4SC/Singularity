@@ -16,6 +16,9 @@ From: ubuntu:xenial
 # INSTALL SECTION
 #######################
 
+    mkdir -p /mnt
+    mkdir -p /scratch
+
     #------------------
     # USER INSTALL
     #------------------

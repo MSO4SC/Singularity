@@ -24,6 +24,8 @@ To get a transparent access to _Finis Terrae 2_ storage devices while using _Sin
 
 == 2. Scratch directory
 
+=== 1.1 Bootstrap
+
 In order to get access to `/scratch` directories of the compute nodes, we encourage you to create this directory inside the container.
 
 We recommend to add the command `mkdir -p /scratch` to the `%post` section of your bootstrap definition file.

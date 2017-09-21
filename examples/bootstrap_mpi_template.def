@@ -42,6 +42,9 @@ From: ubuntu:xenial
     apt-get update
     apt -y --allow-unauthenticated install $REQUERIMENTS
 
+    mkdir -p /mnt
+    mkdir -p /scratch
+
     #------------------
     # USER INSTALL
     #------------------
