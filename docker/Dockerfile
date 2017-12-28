@@ -8,13 +8,13 @@ RUN apt-get update \
         wget curl git make uuid-dev libssl-dev libarchive-dev autoconf automake libtool  \
         tar gzip bash python e2fsprogs squashfs-tools \
     && cd /tmp \
-    && VERSION=2.4.2
-    && wget https://github.com/singularityware/singularity/releases/download/$VERSION/singularity-$VERSION.tar.gz
-    && tar xvf singularity-$VERSION.tar.gz
-    && cd singularity-$VERSION
-    && ./configure --prefix=/usr/local
-    && make
-    && make install
+    && VERSION=2.4.2 \
+    && wget https://github.com/singularityware/singularity/releases/download/$VERSION/singularity-$VERSION.tar.gz \
+    && tar xvf singularity-$VERSION.tar.gz \
+    && cd singularity-$VERSION \
+    && ./configure --prefix=/usr/local \
+    && make \
+    && make install \
     && cd /tmp \
     && rm -rf /tmp/singularity \
     && apt-get remove --purge -y wget curl git make autoconf automake libtool 
